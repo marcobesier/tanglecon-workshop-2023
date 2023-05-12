@@ -111,7 +111,7 @@ contract MyNFT is ERC721 {
     } 
 }
 ```
-12. Now we can use the `tokenSupply` as the `tokenId` during the mint, and increment the `tokenSupply` variable by 1 after each mint:
+12. Now we can use the `tokenSupply + 1` as the `tokenId` during the mint, and increment the `tokenSupply` variable by 1 after each mint:
 ```
 // SPDX-License-Identifier: UNLICENSE
 pragma solidity 0.8.19;
@@ -127,7 +127,7 @@ contract MyNFT is ERC721 {
     }
 
     function mint() public {
-        _mint(msg.sender, tokenSupply);
+        _mint(msg.sender, tokenSupply + 1);
         tokenSupply++;
     } 
 }
@@ -150,7 +150,7 @@ contract MyNFT is ERC721 {
 
     function mint() public {
         require(tokenSupply < MAX_SUPPLY, "supply used up");
-        _mint(msg.sender, tokenSupply);
+        _mint(msg.sender, tokenSupply + 1);
         tokenSupply++;
     } 
 }
@@ -173,7 +173,7 @@ contract MyNFT is ERC721 {
 
     function mint() public {
         require(tokenSupply < MAX_SUPPLY, "supply used up");
-        _mint(msg.sender, tokenSupply);
+        _mint(msg.sender, tokenSupply + 1);
         tokenSupply++;
     }
 
