@@ -1,5 +1,5 @@
 # TangleCon Workshop 2023
-## Workshop guide on how to build a simple NFT collection on IOTA's ShimmerEVM testnet
+## Teaching material for my TangleCon workshop on how to build a simple NFT collection on IOTA's ShimmerEVM testnet 
 
 ### Prerequisites
 
